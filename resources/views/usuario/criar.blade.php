@@ -1,4 +1,5 @@
 <form action="" method="post">
+    @csrf
     <select name="perfil">
         <option value="Administrador">Administrador</option>
         <option value="Prestador">Prestador</option>

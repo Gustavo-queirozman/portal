@@ -8,12 +8,12 @@
 <body>
     <form action="/configuracaoEmail" method="post">
         @csrf
-        <input type="text" name="servidor" placeholder="servidor">
-        <input type="text" name="porta" placeholder="porta">
-        <input type="text" name="seguranca" placeholder="seguranca">
-        <input type="text" name="usuario" placeholder="usuario">
-        <input type="text" name="senha" placeholder="senha">
-        <input type="text" name="email" placeholder="email">
+        <input type="text" name="servidor" placeholder="servidor" value="{{ isset($configuracao)?$configuracao['servidor']: '' }}">
+        <input type="text" name="porta" placeholder="porta" value="{{ isset($configuracao)?$configuracao['porta']: '' }}">
+        <input type="text" name="seguranca" placeholder="seguranca" value="{{ isset($configuracao)?$configuracao['seguranca']: '' }}">
+        <input type="text" name="usuario" placeholder="usuario" value="{{ isset($configuracao)?$configuracao['usuario']: '' }}">
+        <input type="text" name="senha" placeholder="senha" value="{{ isset($configuracao)?$configuracao['senha']: '' }}">
+        <input type="text" name="email" placeholder="email" value="{{ isset($configuracao)?$configuracao['email']: '' }}">
         <input type="submit" value="Salvar">
     </form>
 </body>

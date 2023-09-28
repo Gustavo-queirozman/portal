@@ -20,5 +20,7 @@ class CriarConfiguracaoEmailController extends Controller
         ];
 
         ConfiguracaoEmail::updateOrInsert(['id' => 1], $dados);
+    
+        return view('ConfiguracaoEmail.mostrar')->with('configuracao', $dados);
     }
 }

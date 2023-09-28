@@ -8,9 +8,9 @@
 <body>
     <form action="/configuracaoSMS" method="post">
         @csrf
-        <input type="text" name="empresa" placeholder="empresa">
-        <input type="text" name="api_token" placeholder="Api token">
-        <input type="text" name="modelo_sms" placeholder="modelo sms">
+        <input type="text" name="empresa" placeholder="empresa" value="{{ isset($configuracao)? $configuracao['empresa']:'' }}">
+        <input type="text" name="api_token" placeholder="Api token" value="{{ isset($configuracao['api_token'])? $configuracao['api_token']:'' }}">
+        <input type="text" name="modelo_sms" placeholder="modelo sms" value="{{ isset($configuracao['modelo_sms'])? $configuracao['modelo_sms']:'' }}">
         <input type="submit" value="Salvar">
     </form>
 </body>

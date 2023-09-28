@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/configuracaoSMS', [App\Http\Controllers\ConfiguracaoSMS\MostrarConfiguracaoSMSController::class, 'create']);
-Route::post('/configuracaoSMS', [App\Http\Controllers\ConfiguracaoSMS\CriarConfiguracaoSMSController::class, 'store']);
+Route::get('/configuracaoSms', [App\Http\Controllers\ConfiguracaoSms\MostrarConfiguracaoSmsController::class, 'create']);
+Route::post('/configuracaoSms', [App\Http\Controllers\ConfiguracaoSms\CriarConfiguracaoSmsController::class, 'store']);
 
 
 Route::get('/configuracaoEmail', [App\Http\Controllers\ConfiguracaoEmail\MostrarConfiguracaoEmailController::class, 'create']);

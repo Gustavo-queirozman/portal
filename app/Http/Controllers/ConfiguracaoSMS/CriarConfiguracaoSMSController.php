@@ -20,6 +20,6 @@ class CriarConfiguracaoSMSController extends Controller
         ];
 
         ConfiguracaoSMS::updateOrInsert(['id' => 1], $dados);
-        return view('ConfiguracaoSMS.mostrar')->with('configuracao', $dados);
+        return view('ConfiguracaoSms.mostrar')->with('configuracao', $dados);
     }
 }

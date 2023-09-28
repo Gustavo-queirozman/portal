@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\ConfiguracaoSMS;
 
 use App\Http\Controllers\Controller;
-use App\Models\ConfiguracaoSMS;
+use App\Models\ConfiguracaoSms;
 use Illuminate\Http\Request;
 
 class CriarConfiguracaoSMSController extends Controller
@@ -19,7 +19,7 @@ class CriarConfiguracaoSMSController extends Controller
             'modelo_sms' => $request->input('modelo_sms')
         ];
 
-        ConfiguracaoSMS::updateOrInsert(['id' => 1], $dados);
+        ConfiguracaoSms::updateOrInsert(['id' => 1], $dados);
         return view('ConfiguracaoSms.mostrar')->with('configuracao', $dados);
     }
 }

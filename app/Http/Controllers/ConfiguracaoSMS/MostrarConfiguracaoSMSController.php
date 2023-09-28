@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\ConfiguracaoSMS;
 
 use App\Http\Controllers\Controller;
-use App\Models\ConfiguracaoSMS;
+use App\Models\ConfiguracaoSms;
 use Illuminate\Http\Request;
 
 class MostrarConfiguracaoSMSController extends Controller
@@ -13,7 +13,7 @@ class MostrarConfiguracaoSMSController extends Controller
      */
     public function create(Request $request)
     {
-        $configuracao = ConfiguracaoSMS::find(1);
+        $configuracao = ConfiguracaoSms::find(1);
         return view('ConfiguracaoSms.mostrar', compact('configuracao'));
     }
 }

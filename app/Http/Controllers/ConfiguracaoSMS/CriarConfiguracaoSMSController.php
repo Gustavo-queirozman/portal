@@ -11,7 +11,7 @@ class CriarConfiguracaoSMSController extends Controller
     /**
      * Handle the incoming request.
      */
-    public function store(Request $request)
+    public function __invoke(Request $request)
     {
         //
         ConfiguracaoSMS::create(

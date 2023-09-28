@@ -13,8 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/configuracaoSMS', [App\Http\Controllers\ConfiguracaoSMS\MostrarConfiguracaoSMSController::class, '__invoke']);
 
-Route::get('/configuracaoSMS', [App\Http\Controllers\ConfiguracaoSMS\CriarConfiguracaoSMSController::class, 'store']);
+Route::post('/configuracaoSMS', [App\Http\Controllers\ConfiguracaoSMS\CriarConfiguracaoSMSController::class, '__invoke']);

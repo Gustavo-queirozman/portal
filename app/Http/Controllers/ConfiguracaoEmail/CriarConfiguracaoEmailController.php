@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class CriarConfiguracaoEmailController extends Controller
 {
-    public function __invoke(Request $request){
+    public function store(Request $request){
 
         $dados = [
             'servidor' => $request->input('servidor'),
@@ -20,7 +20,7 @@ class CriarConfiguracaoEmailController extends Controller
         ];
 
         ConfiguracaoEmail::updateOrInsert(['id' => 1], $dados);
-    
+
         return view('ConfiguracaoEmail.mostrar')->with('configuracao', $dados);
     }
 }

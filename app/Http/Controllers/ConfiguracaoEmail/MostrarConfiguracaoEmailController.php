@@ -8,8 +8,8 @@ use Illuminate\Http\Request;
 
 class MostrarConfiguracaoEmailController extends Controller
 {
-    public function __invoke(){
-        $configuracoes = ConfiguracaoEmail::find(1);
-        return view('ConfiguracaoEmail.mostrar', compact('configuracoes'));
+    public function create(){
+        $configuracao = ConfiguracaoEmail::find(1);
+        return view('ConfiguracaoEmail.mostrar', compact('configuracao'));
     }
 }

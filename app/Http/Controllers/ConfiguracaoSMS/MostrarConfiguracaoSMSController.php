@@ -11,9 +11,9 @@ class MostrarConfiguracaoSMSController extends Controller
     /**
      * Handle the incoming request.
      */
-    public function __invoke(Request $request)
+    public function create(Request $request)
     {
-        $configuracoes = ConfiguracaoSMS::find(1);
-        return view('ConfiguracaoSMS.mostrar', compact('configuracoes'));
+        $configuracao = ConfiguracaoSMS::find(1);
+        return view('ConfiguracaoSMS.mostrar', compact('configuracao'));
     }
 }

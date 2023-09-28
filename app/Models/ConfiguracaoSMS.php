@@ -16,4 +16,7 @@ class ConfiguracaoSMS extends Model
     ];
 
     protected $table = 'configuracao_envio_sms';
+    public $timestamps = false;
+
+
 }

@@ -13,13 +13,12 @@ class CriarConfiguracaoSMSController extends Controller
      */
     public function __invoke(Request $request)
     {
-        //
-        ConfiguracaoSMS::create(
-            array(
-                'empresa' => $request->input('empresa'),
-                'api_token' => $request->input('api_token'),
-                'modelo_sms' => $request->input('modelo_sms')
-            )
-        );
+        $dados = [
+            'empresa' => $request->input('empresa'),
+            'api_token' => $request->input('api_token'),
+            'modelo_sms' => $request->input('modelo_sms')
+        ];
+
+        ConfiguracaoSMS::updateOrInsert(['id' => 1], $dados);
     }
 }

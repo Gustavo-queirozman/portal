@@ -14,5 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/configuracaoSMS', [App\Http\Controllers\ConfiguracaoSMS\MostrarConfiguracaoSMSController::class, '__invoke']);
-
 Route::post('/configuracaoSMS', [App\Http\Controllers\ConfiguracaoSMS\CriarConfiguracaoSMSController::class, '__invoke']);
+
+
+Route::get('/configuracaoEmail', [App\Http\Controllers\ConfiguracaoEmail\MostrarConfiguracaoEmailController::class, '__invoke']);
+Route::post('/configuracaoEmail', [App\Http\Controllers\ConfiguracaoEmail\CriarConfiguracaoEmailController::class, '__invoke']);

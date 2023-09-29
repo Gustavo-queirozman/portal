@@ -19,5 +19,3 @@ Route::post('/configuracao-sms', App\Http\Controllers\Configuracao\sms\CriarConf
 Route::get('/configuracao-email', App\Http\Controllers\Configuracao\email\MostrarConfiguracaoEmailController::class)->name('configuracao-email');
 Route::post('/configuracao-email', App\Http\Controllers\Configuracao\email\CriarConfiguracaoEmailController::class)->name('configuracao-email');
 
-Route::get('/cobrancaSms', [App\Http\Controllers\CobrancaSms\EnviarCobrancaSmsController::class, 'index']);
-

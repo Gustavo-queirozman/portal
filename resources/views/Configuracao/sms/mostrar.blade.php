@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/configuracaoSMS" method="post">
+    <form action="{{ route('configuracao-sms') }}" method="post">
         @csrf
         <input type="text" name="empresa" placeholder="empresa" value="{{ isset($configuracao)? $configuracao['empresa']:'' }}">
         <input type="text" name="api_token" placeholder="Api token" value="{{ isset($configuracao['api_token'])? $configuracao['api_token']:'' }}">

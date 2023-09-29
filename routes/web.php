@@ -13,9 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/configuracaoSms', [App\Http\Controllers\ConfiguracaoSms\MostrarConfiguracaoSmsController::class, 'create']);
-Route::post('/configuracaoSms', [App\Http\Controllers\ConfiguracaoSms\CriarConfiguracaoSmsController::class, 'store']);
+Route::get('/configuracao-sms', App\Http\Controllers\Configuracao\sms\MostrarConfiguracaoSmsController::class)->name('configuracao-sms');
+Route::post('/configuracao-sms', App\Http\Controllers\Configuracao\sms\CriarConfiguracaoSmsController::class)->name('configuracao-sms');
 
+Route::get('/configuracao-email', App\Http\Controllers\Configuracao\email\MostrarConfiguracaoEmailController::class)->name('configuracao-email');
+Route::post('/configuracao-email', App\Http\Controllers\Configuracao\email\CriarConfiguracaoEmailController::class)->name('configuracao-email');
 
-Route::get('/configuracaoEmail', [App\Http\Controllers\ConfiguracaoEmail\MostrarConfiguracaoEmailController::class, 'create']);
-Route::post('/configuracaoEmail', [App\Http\Controllers\ConfiguracaoEmail\CriarConfiguracaoEmailController::class, 'store']);
+Route::get('/cobrancaSms', [App\Http\Controllers\CobrancaSms\EnviarCobrancaSmsController::class, 'index']);
+

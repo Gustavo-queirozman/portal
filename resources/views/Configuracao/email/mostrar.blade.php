@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/configuracaoEmail" method="post">
+    <form action="{{ route('configuracao-email') }}" method="post">
         @csrf
         <input type="text" name="servidor" placeholder="servidor" value="{{ isset($configuracao)?$configuracao['servidor']: '' }}">
         <input type="text" name="porta" placeholder="porta" value="{{ isset($configuracao)?$configuracao['porta']: '' }}">

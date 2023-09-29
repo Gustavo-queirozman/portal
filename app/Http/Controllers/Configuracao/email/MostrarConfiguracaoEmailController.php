@@ -7,7 +7,7 @@ use App\Models\Configuracao\Email;
 use Illuminate\Http\Request;
 use Lorisleiva\Actions\Concerns\AsAction;
 
-class MostrarConfiguracaoEmailController extends Controller
+class MostrarConfiguracaoEmailController
 {
     use AsAction;
 

@@ -7,7 +7,7 @@ use App\Models\Configuracao\Sms;
 use Illuminate\Http\Request;
 use Lorisleiva\Actions\Concerns\AsAction;
 
-class MostrarConfiguracaoSmsController extends Controller
+class MostrarConfiguracaoSmsController
 {
 
     use AsAction;

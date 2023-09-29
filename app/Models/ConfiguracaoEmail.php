@@ -1,13 +1,14 @@
 <?php
 
-namespace App\Models\Configuracao;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Email extends Model
+class ConfiguracaoEmail extends Model
 {
     use HasFactory;
+
 
     protected $fillable = [
         'servidor',

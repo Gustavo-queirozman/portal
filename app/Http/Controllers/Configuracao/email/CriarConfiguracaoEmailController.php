@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Configuracao\email;
 
 use App\Http\Controllers\Controller;
-use App\Models\Configuracao\Email;
+use App\Models\ConfiguracaoEmail;
 use Illuminate\Http\Request;
 use Lorisleiva\Actions\Concerns\AsAction;
 
@@ -25,7 +25,7 @@ class CriarConfiguracaoEmailController
             'email' => $request->input('email')
         ];
 
-        Email::updateOrInsert(['id' => 1], $dados);
+        ConfiguracaoEmail::updateOrInsert(['id' => 1], $dados);
 
         return view('Configuracao.email.mostrar')->with('configuracao', $dados);
     }

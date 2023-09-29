@@ -1,13 +1,14 @@
 <?php
 
-namespace App\Models\Configuracao;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Sms extends Model
+class ConfiguracaoSms extends Model
 {
     use HasFactory;
+
 
     protected $fillable = [
         'empresa',
@@ -17,6 +18,4 @@ class Sms extends Model
 
     protected $table = 'configuracao_envio_sms';
     public $timestamps = false;
-
-
 }

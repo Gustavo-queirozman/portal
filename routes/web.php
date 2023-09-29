@@ -19,3 +19,5 @@ Route::post('/configuracao-sms', App\Http\Controllers\Configuracao\sms\CriarConf
 Route::get('/configuracao-email', App\Http\Controllers\Configuracao\email\MostrarConfiguracaoEmailController::class)->name('configuracao-email');
 Route::post('/configuracao-email', App\Http\Controllers\Configuracao\email\CriarConfiguracaoEmailController::class)->name('configuracao-email');
 
+Route::get('/cobranca', App\Http\Controllers\Notificacao\sms\EnviarSmsCobranca::class)->name('cobranca');
+#Route::get('/producao-medica', App\Http\Controllers\Notificacao\sms\EnviarSmsProducaoMedica::class)->name('cobranca');
